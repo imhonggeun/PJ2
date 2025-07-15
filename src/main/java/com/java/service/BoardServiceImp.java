@@ -32,8 +32,11 @@ public class BoardServiceImp implements BoardService{
 
 	@Override
 	public String input(HttpServletRequest req) {
-		// TODO Auto-generated method stub
-		return null;
+		String title = req.getParameter("title");
+		String content = req.getParameter("content");
+		TestDTO testDto = TestDTO.builder().title(title).content(content).build();
+		testDto = boardDao.input(testDto);
+		return "redirect:/";
 	}
 
 }

@@ -19,4 +19,9 @@ public class BoardDaoImp implements BoardDao {
 		return boardMapper.findlist(accept);
 	}
 
+	@Override
+	public TestDTO input(TestDTO testDto) {
+		return boardMapper.input(testDto);
+	}
+
 }
